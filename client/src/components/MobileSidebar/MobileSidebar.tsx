@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/Theme/mode-toggle"
 import { useState, useEffect } from "react"
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
+// const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
 
 const MobileSidebar = () => {
     // const [userImage, setUserImage] = useState<string | null>(null);
@@ -49,21 +49,21 @@ const MobileSidebar = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const username = localStorage.getItem('username');
-                if (!username) {
-                    throw new Error('Username not found in localStorage');
-                }
+                // const username = localStorage.getItem('username');
+                // if (!username) {
+                //     throw new Error('Username not found in localStorage');
+                // }
 
-                const response = await fetch(`${BACKEND_URL}/profile/${username}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
+                // const response = await fetch(`${BACKEND_URL}/profile/${username}`, {
+                //     method: 'GET',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                // });
 
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                // if (!response.ok) {
+                //     throw new Error('Network response was not ok');
+                // }
 
                 // const responseData = await response.json();
                 // setUserImage(responseData.user.image || null);

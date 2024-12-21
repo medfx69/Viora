@@ -28,11 +28,11 @@ def signin():
 def math_solution():
     data = request.json
     question = data.get('question')
-    username = data.get('username')  # Assume username is sent with the request
-    if not question or not username:
+    # username = data.get('username')  # Assume username is sent with the request
+    if not question:
         return jsonify({"error": "Question and username are required"}), 400
     
-    solution = get_math_solution(question, username)
+    solution = get_math_solution(question)
     return jsonify({"solution": solution}), 200
 
 @model_routes.route('/chat_history', methods=['GET'])

@@ -55,7 +55,7 @@ client = OpenAI(
 )
 
 
-def get_math_solution(question, username):
+def get_math_solution(question):
     try:
         # response = chat_session.send_message(question)
         

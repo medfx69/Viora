@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 CORS(app, supports_credentials=True, resources={
     r"/*": {
-        "origins": ["http://localhost:5173","https://viora-c4vyjtv65-mohamed-ait-aadis-projects.vercel.app/"],
+        "origins": ["http://localhost:5173",os.getenv('FRONTEND_URL')],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
     }
