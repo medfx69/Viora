@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "sonner"
 import { loginWithGithub } from "@/lib/githubOAuth";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
 
 export default function Signin() {
     const [formData, setFormData] = useState({ username: "", password: "" });

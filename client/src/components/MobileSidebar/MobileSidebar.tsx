@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/Theme/mode-toggle"
 import { useState, useEffect } from "react"
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
 
 const MobileSidebar = () => {
     // const [userImage, setUserImage] = useState<string | null>(null);

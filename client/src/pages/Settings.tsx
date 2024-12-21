@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ComingSoon from "@/components/ComingSoon/Coming-soon";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
 
 const formSchema = z.object({
   firstname: z

@@ -1,5 +1,5 @@
 const CALLBACK_URL = "https://quantica-v1.vercel.app";  
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://viora-v1.onrender.com";
 
 
 export const loginWithGithub = async () => {
