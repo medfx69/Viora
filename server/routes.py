@@ -37,11 +37,12 @@ def math_solution():
 
 @model_routes.route('/chat_history', methods=['GET'])
 def get_chat_history():
-    username = request.args.get('username')
-    if not username:
-        return jsonify({"error": "Username is required"}), 400
+    # username = request.args.get('username')
+    # if not username:
+    #     return jsonify({"error": "Username is required"}), 400
     
-    chat_history = User.get_chat_history(username)
+    # User.get_chat_history(username)
+    chat_history = None
     return jsonify({"chat_history": chat_history}), 200
 
 @auth_routes.route('/profile/<username>', methods=['GET'])

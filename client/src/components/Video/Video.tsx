@@ -1,6 +1,6 @@
 const Video = () => {
     const handleButtonClick = () => {
-        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; 
+        window.open('https://www.youtube.com/watch?v=cDr_y0kGddA', '_blank');
     };
 
     return (

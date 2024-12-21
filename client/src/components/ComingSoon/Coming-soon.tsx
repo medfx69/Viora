@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { toast } from "sonner"
 import { Toaster } from "@/components/ui/toaster"
 import Footer from '@/components/Footer/Footer';
 
@@ -13,9 +12,9 @@ export default function ComingSoon() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         console.log('Submitted email:', email)
-        toast.success("Success !", {
-            description: "You've been added to our waitlist.",
-        })
+        // toast.success("Success !", {
+        //     description: "You've been added to our waitlist.",
+        // })
         setEmail('')
     }
 
@@ -27,7 +26,7 @@ export default function ComingSoon() {
                         className="text-4xl font-bold text-primary cursor-pointer" 
                         onClick={() => window.location.href = '/'}
                     >
-                        Quantica
+                        Viora
                     </h1>
                     <h2 className="text-2xl font-semibold">Coming Soon</h2>
                     <p className="text-muted-foreground">

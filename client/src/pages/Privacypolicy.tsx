@@ -7,14 +7,14 @@ export default function PrivacyPolicy() {
     return (
         <div className="min-h-screen bg-background text-foreground p-8">
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl font-bold mb-6">Quantica Privacy Policy</h1>
+                <h1 className="text-4xl font-bold mb-6">Viora Privacy Policy</h1>
                 <p className="text-muted-foreground mb-8">Last updated: {lastUpdated}</p>
 
                 <ScrollArea className="h-[600px] rounded-md border p-4">
                     <div className="pr-4">
                         <section className="mb-8">
                             <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-                            <p>Welcome to Quantica. We value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or interact with our services.</p>
+                            <p>Welcome to Viora. We value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or interact with our services.</p>
                         </section>
 
                         <section className="mb-8">

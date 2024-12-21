@@ -20,6 +20,11 @@ export default function Signin() {
         e.preventDefault();
 
         try {
+            localStorage.setItem('username', "testttttt");
+            // toast.success("Signin Successful", {
+            //     description: `Welcome, testttttt`
+            // });
+            navigate("/home");
             const response = await fetch(`${BACKEND_URL}/signin`, {
                 method: "POST",
                 headers: {
@@ -33,9 +38,9 @@ export default function Signin() {
                 // Store the username in localStorage
                 localStorage.setItem('username', data.user.username);
                 
-                toast.success("Signin Successful", {
-                    description: `Welcome, ${data.user.username}`
-                });
+                // toast.success("Signin Successful", {
+                //     description: `Welcome, ${data.user.username}`
+                // });
                 navigate("/home");
             } else {
                 const errorData = await response.json();
@@ -54,7 +59,7 @@ export default function Signin() {
         <div className="min-h-screen flex items-center justify-center">
             <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
                 <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 text-center mb-4">
-                    Welcome to Quantica | Signin
+                    Welcome to Viora | Signin
                 </h2>
                 <form className="my-8" onSubmit={handleSubmit}>
                     <LabelInputContainer className="mb-4">

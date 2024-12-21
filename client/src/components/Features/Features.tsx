@@ -23,24 +23,24 @@ export const projects = [
         link: "plot",
     },
     {
-        title: "User Profile Management",
+        title: "Decentralized Problem-Solving ",
         description:
-            "User Profile Management allows users to create, view, edit, and delete their profiles. It includes functionalities like updating personal information, profile pictures, and managing privacy settings.",
+            "A technology  that focuses on exchange knowledge and earn rewards for their expertise.",
     },
     {
-        title: "Meta",
+        title: "AI-Enhanced Solver",
         description:
-            "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+            "step-by-step explanations for every problem the AI solves, making it easier for users to understand the solution process.",
     },
     {
-        title: "Amazon",
+        title: "World Chat",
         description:
-            "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+            "a space where users can invite their friends to discuss and solve problems together in real time.",
     },
     {
-        title: "Microsoft",
+        title: "Blockchain AI Math Competitions",
         description:
-            "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+            "Host math competitions with on-chain solution submissions for transparency, where AI evaluates answers and provides real-time feedback.",
     },
 ].map(project => ({
     ...project,

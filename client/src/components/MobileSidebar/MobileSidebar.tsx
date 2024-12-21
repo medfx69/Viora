@@ -1,5 +1,4 @@
 import {
-    CircleUser,
     Home,
     LineChart,
     Menu,
@@ -8,28 +7,20 @@ import {
 } from "lucide-react"
 import {
     DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { logout } from "@/lib/githubOAuth"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/Theme/mode-toggle"
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react"
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
 const MobileSidebar = () => {
-    const [userImage, setUserImage] = useState<string | null>(null);
+    // const [userImage, setUserImage] = useState<string | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(() => {
         // Parse the value from localStorage as a boolean
         return localStorage.getItem('isFullscreen') === 'true';
     });
-    const navigate = useNavigate();
 
     const handleFullscreenToggle = () => {
         if (!isFullscreen) {
@@ -74,8 +65,8 @@ const MobileSidebar = () => {
                     throw new Error('Network response was not ok');
                 }
 
-                const responseData = await response.json();
-                setUserImage(responseData.user.image || null);
+                // const responseData = await response.json();
+                // setUserImage(responseData.user.image || null);
             } catch (error) {
                 console.error('Error fetching user data', error);
             }
@@ -96,7 +87,7 @@ const MobileSidebar = () => {
                 <SheetContent side="left" className="flex flex-col">
                     <nav className="grid gap-2 text-lg font-medium">
                         <a href="#" className="flex items-center gap-2 text-lg font-semibold">
-                            <span>Quantica</span>
+                            <span>Viora</span>
                         </a>
                         <a
                             href="/home"
@@ -123,7 +114,7 @@ const MobileSidebar = () => {
                     <Fullscreen onClick={handleFullscreenToggle} />
                 )}
                 <ModeToggle />
-                <DropdownMenuTrigger asChild>
+                {/* <DropdownMenuTrigger asChild>
                     <Button variant="secondary" size="icon" className="rounded-full">
                         {userImage ? (
                             <img src={userImage} alt="User Profile" className="h-5 w-5 rounded-full" />
@@ -132,8 +123,8 @@ const MobileSidebar = () => {
                         )}
                         <span className="sr-only">Toggle user menu</span>
                     </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                </DropdownMenuTrigger> */}
+                {/* <DropdownMenuContent align="end">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem
@@ -151,7 +142,7 @@ const MobileSidebar = () => {
                     <DropdownMenuItem onClick={() => navigate('/settings')}>Settings</DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={logout}>Logout</DropdownMenuItem>
-                </DropdownMenuContent>
+                </DropdownMenuContent> */}
             </DropdownMenu>
         </header>
     );

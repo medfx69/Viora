@@ -1,11 +1,9 @@
-import Landing from "./pages/Landing"
-import Signup from './pages/Signup';
-import { ThemeProvider } from '@/components/Theme/theme-provider'
-import { Route, Routes } from 'react-router-dom';
-import { Toaster } from "@/components/ui/sonner"
-import Signin from "./pages/Signin";
-import Home from "./pages/Home"
-import Plot from "./pages/Plot"
+import Landing from "./pages/Landing";
+import { ThemeProvider } from "@/components/Theme/theme-provider";
+import { Route, Routes } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
+import Home from "./pages/Home";
+import Plot from "./pages/Plot";
 import Profile from "./components/Profile/Profile";
 import Settings from "./pages/Settings";
 import PrivacyPolicy from "./pages/Privacypolicy";
@@ -14,13 +12,17 @@ import WorldChat from "./pages/WorldChat";
 import TermsAndConditions from "./pages/TermsAndConditions";
 
 const App = () => {
+  localStorage.setItem("username", "testttttt");
+  // toast.success("Signin Successful", {
+  //   description: `Welcome, testttttt`,
+  // });
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/signup" element={<Signup />} /> 
-        <Route path="/signin" element={<Signin/>} /> 
-        <Route path="/home" element={<Home />} /> 
+        {/* <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} /> */}
+        <Route path="/home" element={<Home />} />
         <Route path="/plot" element={<Plot />} />
         <Route path="/docs" element={<Docs />} />
         <Route path="/worldchat" element={<WorldChat />} />
@@ -32,7 +34,7 @@ const App = () => {
       </Routes>
       <Toaster />
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
