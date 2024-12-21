@@ -18,6 +18,8 @@ CORS(app, supports_credentials=True, resources={
     }
 })
 
+print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+print(os.getenv('FRONTEND_URL'))
 
 client = MongoClient(os.getenv('MONGODB_URI'))
 db = client['quantica']
