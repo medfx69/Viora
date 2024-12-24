@@ -65,7 +65,7 @@ def get_math_solution(question):
         messages=[{
             "role": "system",
             "content": 
-                "Welcome to Viora. this model is about solving maths problem",
+                "Welcome to Viora. this model is about solving maths problem only",
         },
         { "role": "user", "content": question }],
         model="gpt-3.5-turbo"

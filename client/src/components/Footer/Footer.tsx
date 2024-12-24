@@ -24,7 +24,7 @@ const Footer = () => {
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a
-                      href="https://twitter.com/yourprofile"
+                      href="https://x.com/VioraScience"
                       className="hover:underline"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -64,7 +64,7 @@ const Footer = () => {
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a
-                href="#"
+                href="https://x.com/VioraScience"
                 className="text-gray-500 w-4 h-4 hover:text-gray-900 dark:hover:text-white ms-5"
               >
                 <svg

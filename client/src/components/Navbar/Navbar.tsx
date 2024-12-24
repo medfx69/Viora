@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HoveredLink, Menu, MenuItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/Theme/theme-provider";
+import pdfUrl  from "@/assets/docs.pdf";
 
 export function NavbarDemo() {
   return (
@@ -14,6 +15,10 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const handleOpenPdf = () => {
+     // Replace with your PDF file path or URL
+    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+  };
   const { setTheme } = useTheme();
   return (
     <div
@@ -25,11 +30,10 @@ function Navbar({ className }: { className?: string }) {
             <div className="flex flex-col space-y-4 text-sm">
               <a href="/home">Chat with AI</a>
               <a href="/plot">Function Plotter</a>
-              <a href="/docs">Docs</a>
               <a href="/worldchat">World Chat</a>
             </div>
           </MenuItem>
-          <a href="/docs" className="text-sm">Docs</a>
+          <a onClick={handleOpenPdf} className="text-sm cursor-pointer">Docs</a>
 
           <MenuItem setActive={setActive} active={active} item="Theme">
             <div className="flex flex-col space-y-4 text-sm">
